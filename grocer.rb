@@ -58,5 +58,8 @@ def checkout(cart, coupons)
   consoli.each do |item, hash1|
     sum += consoli[item][:price] * consoli[item][:count]
   end
+  if sum >100
+    sum = sum * 0.9
+  end
   return sum
 end
