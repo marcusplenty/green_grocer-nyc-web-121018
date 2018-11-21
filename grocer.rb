@@ -56,7 +56,7 @@ def checkout(cart, coupons)
   apply_clearance(consoli)
   sum = 0
   consoli.each do |item, hash1|
-    sum += consoli[item][:price]
+    sum += consoli[item][:price] * consoli[item][:count]
   end
   return sum
 end
